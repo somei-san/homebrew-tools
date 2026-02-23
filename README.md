@@ -12,6 +12,8 @@
 `cliip-show` は macOS 向けの常駐アプリです。  
 クリップボードにコピーされたプレーンテキストを検知し、画面中央に短時間（約1秒）HUD 表示します。
 
+![cliip-show HUDの表示イメージ](docs/assets/cliip-show-hud.png)
+
 ### インストール（初回導入）
 
 ```bash
