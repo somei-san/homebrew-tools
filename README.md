@@ -3,7 +3,7 @@
 `clip-show` を Homebrew で配布するための Tap リポジトリです。
 
 - source repository: <https://github.com/somei-san/clip-show>
-- formula: `clip-show.rb`
+- formula: `Formula/clip-show.rb`
 
 ## clip-show とは
 
@@ -14,7 +14,7 @@
 
 - macOS
 
-## インストール
+## インストール（初回導入）
 
 ```bash
 brew tap somei-san/clip-show
@@ -26,7 +26,7 @@ brew services start clip-show
 
 1. `brew tap somei-san/clip-show`: `somei-san/clip-show` Tap を Homebrew に登録します。
 2. `brew install clip-show`: Tap に含まれる `clip-show` Formula から本体をインストールします。
-3. `brew services start clip-show`: `clip-show` を常駐起動し、ログイン時の自動起動も有効にします。
+3. `brew services start clip-show`: `clip-show` を常駐起動し、ログイン時の自動起動も有効にします（初期導入時は必須）。
 
 1 行で実行する場合:
 
@@ -36,7 +36,7 @@ brew tap somei-san/clip-show && brew install clip-show && brew services start cl
 
 ## 起動・停止（ログイン時自動起動）
 
-`clip-show` は Homebrew Service として起動できます。（上記、インストールコマンドに織り込み済み）
+`clip-show` は Homebrew Service として動作します。
 
 ```bash
 brew services start clip-show
@@ -84,6 +84,12 @@ brew untap somei-san/clip-show
 
 ## メンテナー向け
 
-参照
+`clip-show` 側でリリースタグ（例: `v0.1.0`）を作成後、`clip-show` リポジトリの生成スクリプトで Formula を更新できます。
 
-<https://github.com/somei-san/clip-show/docs/Homebrewで公開する手順.md>
+```bash
+./scripts/homebrew/generate_formula.sh somei-san <version> ./Formula/clip-show.rb
+```
+
+詳細手順:
+
+<https://github.com/somei-san/clip-show/blob/main/docs/Homebrewで公開する手順.md>
