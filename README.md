@@ -22,6 +22,12 @@ brew install clip-show
 brew services start clip-show
 ```
 
+各コマンドの意味:
+
+1. `brew tap somei-san/clip-show`: `somei-san/clip-show` Tap を Homebrew に登録します。
+2. `brew install clip-show`: Tap に含まれる `clip-show` Formula から本体をインストールします。
+3. `brew services start clip-show`: `clip-show` を常駐起動し、ログイン時の自動起動も有効にします。
+
 1 行で実行する場合:
 
 ```bash
@@ -30,7 +36,7 @@ brew tap somei-san/clip-show && brew install clip-show && brew services start cl
 
 ## 起動・停止（ログイン時自動起動）
 
-`clip-show` は Homebrew Service として起動できます。
+`clip-show` は Homebrew Service として起動できます。（上記、インストールコマンドに織り込み済み）
 
 ```bash
 brew services start clip-show
@@ -76,12 +82,8 @@ Tap 自体も外す場合:
 brew untap somei-san/clip-show
 ```
 
-## メンテナー向け（Formula 更新）
+## メンテナー向け
 
-`clip-show` 側でリリースタグ（例: `v0.1.0`）を作成後、`clip-show` リポジトリの生成スクリプトで Formula を更新できます。
+参照
 
-```bash
-./scripts/homebrew/generate_formula.sh somei-san <version> <output-path>
-```
-
-このリポジトリでは `clip-show.rb` を更新対象にします。
+<https://github.com/somei-san/clip-show/docs/Homebrewで公開する手順.md>
