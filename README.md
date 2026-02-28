@@ -25,7 +25,7 @@ brew services start cliip-show
 各コマンドの意味:
 
 1. `brew tap somei-san/tools`: `somei-san/tools` Tap を Homebrew に登録します。
-2. `brew install cliip-show`: Tap に含まれる `cliip-show` Formula から本体をインストールします。
+2. `brew install somei-san/tools/cliip-show`: Tap に含まれる `cliip-show` Formula から本体をインストールします。
 3. `brew services start cliip-show`: `cliip-show` を常駐起動し、ログイン時の自動起動も有効にします（初期導入時は必須）。
 
 1 行で実行する場合:
