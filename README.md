@@ -21,7 +21,7 @@ brew tap somei-san/tap
 ### インストール
 
 ```bash
-brew install somei-san/tools/cliip-show
+brew install somei-san/tap/cliip-show
 brew services start cliip-show
 ```
 
